@@ -1,0 +1,91 @@
+# -------------------------
+# Operating System
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Build artifacts
+# -------------------------
+build/
+dist/
+bin/
+target/
+out/
+
+# -------------------------
+# C++ / CMake
+# -------------------------
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
+Makefile
+*.o
+*.so
+*.a
+
+# -------------------------
+# Node / frontend
+# -------------------------
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+
+# -------------------------
+# Logs
+# -------------------------
+*.log
+logs/
+
+# -------------------------
+# Runtime files
+# -------------------------
+*.pid
+*.sock
+
+# -------------------------
+# IDE files
+# -------------------------
+.vscode/
+.idea/
+
+# -------------------------
+# Environment configs
+# -------------------------
+.env
+.env.local
+.env.production
+
+# -------------------------
+# Secrets
+# -------------------------
+secrets/
+private/
+keys/
+
+# -------------------------
+# Docker
+# -------------------------
+docker-data/
+
+# -------------------------
+# Kubernetes
+# -------------------------
+*.kubeconfig
+
+# -------------------------
+# Terraform
+# -------------------------
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
