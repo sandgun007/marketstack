@@ -983,9 +983,17 @@
                     asksList.innerHTML = '<div class="empty-message">No asks</div>';
                 }
 
-                // Show spread if both bid and ask exist
+                // Update ticker display from initial load
                 if (data.best_bid && data.best_ask) {
                     const spread = (data.best_ask - data.best_bid).toFixed(2);
+                    const spreadPercent = ((spread / data.best_bid) * 100).toFixed(3);
+                    const midPrice = ((data.best_bid + data.best_ask) / 2).toFixed(2);
+
+                    document.getElementById('tickerPrice').textContent = `$${midPrice}`;
+                    document.getElementById('tickerSpread').textContent = `$${spread} (${spreadPercent}%)`;
+                    document.getElementById('tickerBid').textContent = `$${data.best_bid.toFixed(2)}`;
+                    document.getElementById('tickerAsk').textContent = `$${data.best_ask.toFixed(2)}`;
+
                     console.log(`Spread: $${spread} (${((spread / data.best_bid) * 100).toFixed(2)}%)`);
                 }
             } catch (error) {
